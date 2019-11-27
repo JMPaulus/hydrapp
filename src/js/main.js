@@ -19,16 +19,26 @@ if ('serviceWorker' in navigator) {
 const buttonAdd = document.querySelector(".button-add--js");
 const buttonRemove = document.querySelector(".button-remove--js");
 const value = document.querySelector(".counter__value--js");
+const key = new Date().toISOString().slice(0, 10);
+
+if(!localStorage.getItem(key)){
+  localStorage.setItem(key, 0)
+  value.innerHTML="0";
+} else{
+    value.innerHTML = localStorage.getItem(key);
+}
 
 buttonAdd.addEventListener('click', (e) => {
+  
   value.innerHTML = parseInt (value.innerHTML) + 1;
 })
 
 buttonRemove.addEventListener('click', (e) => {
   const currentValue = parseInt(value.innerHTML);
-  if(currentValue >0){
+  if(currentValue >0) {
   value.innerHTML = currentValue - 1;
   }
+  
 })
 
 
