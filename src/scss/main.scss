@@ -18,16 +18,61 @@ body {
   color: $white;
   background: $blue;
   font-family: Roboto Mono;
+  font-weight: 500;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.button-add{
+  padding: 12px;
+  font-size: 18px;
+  background-color:white;
+  border: none;
+  border-radius: 4px;
+  min-width: 128px;
+  box-shadow: 0px 4px 4px rgba (0, 0, 0, 0.25);
+  margin: 48px 0 25px;
+}
+
+.button-remove{
+  padding: 12px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  min-width: 128px;
+
+  
 }
 
 .counter{
   width: 200px;
+  height: 200px;
+  background: url("../assets/img/water.svg");
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: black;
+  &__value{
+    display:block;
+    padding-top: 20px;
+  }
   
 }
-
 
 .heading{
   font-size:60px;
   padding: 0;
   margin: 20px 0 64px 20px;
 }
+
+.main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
