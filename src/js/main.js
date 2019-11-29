@@ -29,13 +29,13 @@ if(!localStorage.getItem(key)){
 }
 
 buttonAdd.addEventListener('click', (e) => {
-  
-  value.innerHTML = parseInt (value.innerHTML) + 1;
+  localStorage.setItem(key, localStorage.getItem(key)+1)
+  value.innerHTML = localStorage.getItem(key);
 })
 
 buttonRemove.addEventListener('click', (e) => {
   const currentValue = parseInt(value.innerHTML);
-  if(currentValue >0) {
+  if(currentValue > 0) {
   value.innerHTML = currentValue - 1;
   }
   
