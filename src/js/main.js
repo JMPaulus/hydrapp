@@ -29,7 +29,7 @@ if(!localStorage.getItem(key)){
 }
 
 buttonAdd.addEventListener('click', (e) => {
-  localStorage.setItem(key, localStorage.getItem(key)+1)
+  localStorage.setItem(key, parseInt(localStorage.getItem(key))+1)
   value.innerHTML = localStorage.getItem(key);
 })
 
@@ -37,7 +37,7 @@ buttonRemove.addEventListener('click', (e) => {
   const currentValue = parseInt(localStorage.getItem(key));
   if(currentValue > 0) {
   localStorage.setItem(key, localStorage.getItem(key)-1)
-  value.innerHTML = currentValue - 1;
+    value.innerHTML = localStorage.getItem(key) - 1;
   }
   
 })
